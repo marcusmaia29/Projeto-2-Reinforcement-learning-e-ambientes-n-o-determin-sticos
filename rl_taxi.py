@@ -19,7 +19,7 @@ def make_env(rainy=False):
 
 def epsilon_greedy(q_table, state, epsilon, rng, action_space):
     if rng.random() < epsilon:
-        return int(action_space.sample())
+        return int(rng.integers(action_space.n))
     return int(np.argmax(q_table[state]))
 
 
