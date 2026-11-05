@@ -39,7 +39,11 @@ def train_q_learning(seed, rainy=False):
             next_state, reward, terminated, truncated, _ = env.step(action)
             done = terminated or truncated
 
-            target = reward if done else reward + GAMMA * np.max(q_table[next_state])
+            if terminated:
+                target = reward
+            else:
+                target = reward + GAMMA * np.max(q_table[next_state])
+
             q_table[state, action] += ALPHA * (target - q_table[state, action])
 
             state = next_state
@@ -71,7 +75,7 @@ def train_sarsa(seed, rainy=False):
             next_state, reward, terminated, truncated, _ = env.step(action)
             done = terminated or truncated
 
-            if done:
+            if terminated:
                 target = reward
                 next_action = None
             else:
