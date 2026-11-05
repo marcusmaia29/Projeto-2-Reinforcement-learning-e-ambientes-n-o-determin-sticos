@@ -9,6 +9,10 @@ O objetivo é implementar e comparar dois algoritmos tabulares de reinforcement 
 
 Os agentes são treinados e avaliados em ambientes determinístico e não determinístico.
 
+## Integrante
+
+Marcus Vinicius Aguiar Maia
+
 ## Ambiente
 
 Foi utilizado o **Taxi-v4** do Gymnasium 1.3.0.
@@ -87,6 +91,9 @@ jupyter notebook projeto2.ipynb
 Execute todas as células em ordem.
 
 ## Resultados
+
+> **Observação sobre os resultados atuais:** o código de treinamento foi corrigido para tratar `terminated` e `truncated` de forma adequada no bootstrap das atualizações. Portanto, os números e gráficos abaixo correspondem à execução anterior e devem ser regenerados executando novamente o notebook do início ao fim.
+
 
 ### Ambiente determinístico
 
