@@ -92,8 +92,6 @@ Execute todas as células em ordem.
 
 ## Resultados
 
-> **Observação sobre os resultados atuais:** o código de treinamento foi corrigido para tratar `terminated` e `truncated` de forma adequada no bootstrap das atualizações. Portanto, os números e gráficos abaixo correspondem à execução anterior e devem ser regenerados executando novamente o notebook do início ao fim.
-
 
 ### Ambiente determinístico
 
